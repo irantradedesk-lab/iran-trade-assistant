@@ -2,3 +2,10 @@ streamlit
 groq
 tavily-python
 google-generativeai
+requests
+pandas
+python-docx
+openpyxl
+edge-tts
+python-pptx
+plotly
