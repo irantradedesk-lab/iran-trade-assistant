@@ -111,6 +111,25 @@ def generate_image(prompt, w=1024, h=1024):
 # UI
 # =====================================================
 st.set_page_config(page_title="Iran Trade Services", page_icon="🌍", layout="wide")
+
+# --- احراز هویت ---
+if "authenticated" not in st.session_state:
+    st.session_state.authenticated = False
+
+if not st.session_state.authenticated:
+    st.title("🔐 Iran Trade Services")
+    st.caption("لطفاً رمز عبور را وارد کنید")
+    pwd = st.text_input("رمز عبور:", type="password")
+    if st.button("ورود", type="primary"):
+        if pwd == st.secrets.get("APP_PASSWORD", ""):
+            st.session_state.authenticated = True
+            st.rerun()
+        else:
+            st.error("❌ رمز اشتباه است")
+    st.stop()
+
+# --- UI اصلی ---
+
 st.title("🌍 Iran Trade Services")
 st.caption("دستیار هوشمند تجارت بین‌الملل")
 
