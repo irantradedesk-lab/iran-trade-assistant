@@ -21,7 +21,7 @@ def ask_groq(messages, model_name="openai/gpt-oss-120b"):
     return response.choices[0].message.content
 
 
-def ask_gemini(messages, model_name="gemini-2.5-flash"):
+def ask_gemini(messages, model_name="gemini-3.8-flash"):
     gemini_model = genai.GenerativeModel(model_name)
     history = []
     for msg in messages:
