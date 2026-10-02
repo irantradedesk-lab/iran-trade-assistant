@@ -1,3 +1,4 @@
 streamlit
 groq
 tavily-python
+google-generativeai
