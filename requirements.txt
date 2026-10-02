@@ -4,6 +4,7 @@ tavily-python
 google-generativeai
 requests
 pandas
+pypdf
 python-docx
 openpyxl
 edge-tts
